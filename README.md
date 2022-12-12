@@ -12,6 +12,8 @@ In the future, I would like to expand this to try to extract promotional codes f
 
 For now I think it is a nice example of a completely serverless workload, using AppSync for the api. I hope that it stands as an example of how to architecture applications like this in the future.
 
+It uses the CDK as a IAAC code tool. 
+
 ## Technology Used
 
 * AppSync (GraphQL + Javascript Resolvers)
@@ -23,6 +25,7 @@ For now I think it is a nice example of a completely serverless workload, using 
 * Athena
 * React 
 * D3.js
+* CDK
 
 ## Architectural Diagram
 

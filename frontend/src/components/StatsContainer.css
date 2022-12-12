@@ -1,0 +1,42 @@
+#StatsContainer { 
+  width: 100%; 
+  max-width: 800px;
+  margin:auto;
+  display: grid;
+  counter-reset: grid-items;
+  padding-top: 20px;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) { 
+  #StatsContainer { 
+    width: 90%; 
+    margin:auto;
+    display: grid;
+    counter-reset: grid-items;
+    padding-top: 20px;
+    gap: 1px;
+    align-self: flex-end;
+    grid-template-columns: repeat(2, minmax(175px, 1fr));
+  }
+
+
+  .smallStatsView:nth-of-type(2) { 
+    justify-self: start;
+  }
+
+  .smallStatsView:nth-of-type(1) { 
+    justify-self: end;
+  }
+
+  .smallStatsView:nth-of-type(4) { 
+    justify-self: end;
+  }
+
+  .smallStatsView:nth-of-type(5) { 
+    justify-self: start;
+  }
+
+}

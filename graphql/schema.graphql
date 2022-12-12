@@ -1,0 +1,55 @@
+type Email {
+	createdAt: Int
+	subject: String
+	contents: String
+}
+
+type Mail {
+	fromAddress: String
+	timestamp: Long
+	subject: String
+}
+
+type MailDomainCount {
+	domain: String
+	count: Int
+}
+
+type MailQueryResults {
+	messages: [Mail]
+	stats: MailStats
+}
+
+type MailSpamCount {
+	spam: Int
+	ham: Int
+}
+
+type MailStats {
+	totalCount: Int
+	totalDistribution: [Int]
+	spamCount: MailSpamCount
+	domains: [MailDomainCount]
+}
+
+type Mutation {
+	createService(serviceName: String, signUpUrl: String): Service
+}
+
+type Query {
+	getService(serviceName: String): Service
+	getEmails(serviceName: String, start: Long, end: Long): MailQueryResults
+}
+
+type Service {
+	eventName: String
+	signUpUrl: String
+	uuid: String
+	createdAt: Long
+	status: String
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+}

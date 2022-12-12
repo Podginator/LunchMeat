@@ -1,0 +1,58 @@
+.searchBoxContainer {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 675px;
+}
+
+.searchBoxContainer>input {
+  box-shadow: 4px 4px 5px 0px rgba(199, 199, 199, 1);
+  width: 95%;
+  display: block;
+  height: 50px;
+  border-radius: 60px;
+  border: 1px solid #a9a9a9;
+  padding: 0px;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 20px;
+}
+
+.searchBoxContainer>input:focus {
+  outline: none;
+}
+
+.searchBoxContainer > button:disabled { 
+  background-color: grey;
+}
+
+.searchBoxContainer>button {
+  position: relative;
+  left: 100%;
+  transform: translate(-35px, 0px);
+  top: -52px;
+  height: 52px;
+  width: 50px;
+  margin: 0;
+  padding: 0;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  color: white;
+  background-color: #2e69eb;
+  border: none;
+  padding: 0;
+  transition: background-color 0.25s;
+  cursor: pointer;
+}
+
+
+.searchBoxContainer>button:hover:enabled {
+  background-color: #7ca6ff;
+}
+
+.searchBoxContainer>button>svg {
+  position: relative;
+  height: 50%;
+  left: -2px;
+  fill: white;
+}
